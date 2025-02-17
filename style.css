@@ -45,14 +45,23 @@ section{
   margin-bottom: 20px;
 }
 
+/* .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px 30px;
+} */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 40px 30px;
-  justify-items: center;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center items vertically */
+  text-align: center; /* Center text inside grid items */
+  max-width: 80%; /* Adjust width for responsiveness */
+  margin: auto; /* Center the grid on the page */
 }
+
 
 .skill-item {
   background-color: #1b1b32;
@@ -489,7 +498,7 @@ body{
 
 .skills .content .col-right .bar .info{
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: space-between;
   margin-bottom: 5px;
 }
@@ -634,6 +643,7 @@ body{
   overflow: hidden;
 }
 
+/* Image container */
 .work .content .card .card-img {
   position: relative;
   width: 100%;
@@ -656,27 +666,78 @@ body{
 .work .content .card .card-img img:hover {
   transform: scale(1.1);
 }
-.hidden-work{
-  display: none;
-}
-/* Project title on hover */
-.work .content .card .card-title {
+
+/* Overlay container for title & button */
+.card-overlay {
   position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -60px;
+  left: 0;
+  width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: bottom 0.3s ease-in-out;
+  text-align: center;
+  padding: 10px 0;
+  transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.work .content .card:hover .card-title {
-  bottom: 20px; /* Moves the title up to the middle */
+/* Project title */
+.card-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
+
+/* View Project button */
+.view-btn {
+  display: inline-block;
+  background: #3a6cf4;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #103ebb;
+  color: #ffffff;
+}
+
+/* Show overlay on hover */
+.work .content .card:hover .card-overlay {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden-work {
+  display: none;
+}
+
+/* "See All" Button */
+.see-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#see-all-btn {
+  background: #3a6cf4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#see-all-btn:hover {
+  background: #103ebb;
+}
+
 
 @media (max-width: 460px) {
   #work h2 {
