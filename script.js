@@ -75,6 +75,13 @@ document.getElementById('see-all-btn').addEventListener('click', function(event)
   }
 });
 
+window.onload = function () {
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+};
+
+
 
 //Get in touch
   // Initialize EmailJS with your User ID
