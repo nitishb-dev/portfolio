@@ -62,7 +62,6 @@ section{
   margin: auto; /* Center the grid on the page */
 }
 
-
 .skill-item {
   background-color: #1b1b32;
   padding: 20px;
@@ -95,6 +94,60 @@ section{
   margin: 0;
   color: #fff;
 }
+@media (max-width: 299px) {
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Reduce spacing for small screens */
+  }
+
+  .skill-item {
+    width: 90%; /* Make items take most of the width */
+    max-width: 140px; /* Prevent them from being too wide */
+    padding: 10px;
+  }
+
+  .skill-item img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skill-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 30px 10px;
+  }
+
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusts columns for small screens */
+    gap: 20px;
+    max-width: 100%; /* Full width for better spacing */
+  }
+
+  .skill-item {
+    width: 150px; /* Reduce width */
+    padding: 15px;
+  }
+
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-item p {
+    font-size: 0.9rem;
+  }
+}
+
 
 @media(max-width: 468px){
 
