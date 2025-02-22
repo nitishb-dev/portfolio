@@ -163,33 +163,33 @@ function revealSections() {
 // Initial call to ensure visible elements are revealed on page load
 document.addEventListener("DOMContentLoaded", revealSections);
 
-// Disable right-click menu
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
+// // Disable right-click menu
+// document.addEventListener('contextmenu', function(e) {
+//   e.preventDefault();
+// });
 
-// Disable specific keyboard shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J)
-document.addEventListener('keydown', function(e) {
-  // Disable F12
-  if (e.keyCode === 123) {
-      e.preventDefault();
-  }
+// // Disable specific keyboard shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J)
+// document.addEventListener('keydown', function(e) {
+//   // Disable F12
+//   if (e.keyCode === 123) {
+//       e.preventDefault();
+//   }
 
-  // Disable Ctrl+Shift+I and Ctrl+Shift+J
-  if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
-      e.preventDefault();
-  }
+//   // Disable Ctrl+Shift+I and Ctrl+Shift+J
+//   if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
+//       e.preventDefault();
+//   }
 
-  // Disable F12 when DevTools is opened (on Mac it's Cmd+Option+I)
-  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-      e.preventDefault();
-  }
-});
+//   // Disable F12 when DevTools is opened (on Mac it's Cmd+Option+I)
+//   if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+//       e.preventDefault();
+//   }
+// });
 
-// Disable opening DevTools using right-click (optional)
-window.oncontextmenu = function() {
-  return false;
-};
+// // Disable opening DevTools using right-click (optional)
+// window.oncontextmenu = function() {
+//   return false;
+// };
 
 
 
