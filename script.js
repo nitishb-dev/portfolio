@@ -168,7 +168,7 @@ document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
 
-// Disable specific keyboard shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J)
+//Disable specific keyboard shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J)
 document.addEventListener('keydown', function(e) {
   // Disable F12
   if (e.keyCode === 123) {
