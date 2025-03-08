@@ -967,7 +967,7 @@ body{
 }
 
 .container {
-  max-width:750px;
+  max-width:700px;
   margin: 0 auto;
 }
 
@@ -1016,11 +1016,6 @@ body{
     font-size: 18px;
   }
 }
-  /* @media (max-width: 310px) {
-    #honours-achievements h2{
-      font-size: 16px;
-    }
-} */
 
 @media screen and (max-width: 768px) {
   .achievement {
@@ -1033,7 +1028,6 @@ body{
     margin-top: 10px;
   }
 }
-
 
 .contact .content .row{
   display: flex;
