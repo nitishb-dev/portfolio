@@ -443,9 +443,10 @@ body{
 }
 
 .about .content .col-left .img-card{
-  position: relative;
-  width: 90%;
-  min-height: 450px;
+  position: center;
+  width: 70%;
+  min-height: 350px;
+  justify-content: center;
 }
 
 .about .content .col-left .img-card img{
